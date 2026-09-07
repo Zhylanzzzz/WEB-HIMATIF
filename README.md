@@ -56,3 +56,70 @@ If you discover a security vulnerability within Laravel, please send an e-mail t
 ## License
 
 The Laravel framework is open-sourced software licensed under the [MIT license](https://opensource.org/licenses/MIT).
+
+
+
+
+# 🌐 Web Portal Resmi HIMATIF (Himpunan Mahasiswa Teknik Informatika)
+
+Web Portal Resmi HIMATIF adalah platform berbasis web modern yang dirancang sebagai pusat informasi publik, dokumentasi kegiatan, dan transparansi aspirasi bagi seluruh mahasiswa Teknik Informatika. Aplikasi ini dibangun dengan standar UI/UX kekinian (*Glassmorphic design* & *responsive layout*) serta didukung oleh Admin Panel yang dinamis.
+
+---
+
+## 🚀 Fitur Utama
+
+- **🏠 Beranda & Highlight Agenda:** Menampilkan profil singkat dan kartu agenda event mendatang secara langsung.
+- **📜 Profil Organisasi Dinamis:** Informasi Sejarah, Visi, Misi, Alamat Sekretariat, dan Tautan Sosial Media resmi yang dikelola dinamis via Admin Panel.
+- **🌳 Pohon Struktur Pengurus (Tree Structure):** Visualisasi bagan hirarki kepengurusan berbasis atasan langsung (*parent-child relationship*) secara otomatis.
+- **📅 Agenda & Event (+ Search & Filter):** Filter agenda kegiatan berdasarkan kata kunci pencarian maupun status event (*Upcoming, Completed, Cancelled*).
+- **📸 Galeri Dokumentasi (+ Interactive Lightbox):** Album foto kegiatan interaktif yang dapat diklik untuk menampilkan preview foto *full-size* (*Next/Previous slider*).
+- **📂 Download Center & Bank Soal:** Pusat unduhan berkas publik (modul pembelajaran, bank soal ujian, template proposal, AD/ART) yang dilengkapi dengan penghitung otomatis jumlah unduhan (*download counter*).
+- **📥 Pusat Aspirasi & Monitoring Progress:** Portal pengiriman aspirasi anonim secara aman tanpa perlu login. Pengirim mendapatkan **Kode Tracking Unik** (contoh: `ASP-XXXXXXXX`) untuk memantau status balasan admin.
+- **⚙️ Filament Admin Panel:** Dashboard manajemen konten terintegrasi untuk mengelola profil, pengurus, event, dokumen, galeri, dan menanggapi aspirasi.
+
+---
+
+## 🛠️ Tech Stack & Dependencies
+
+- **Framework Backend:** [Laravel](https://laravel.com/)
+- **Admin Panel:** [Filament PHP](https://filamentphp.com/)
+- **Frontend Styling:** [Tailwind CSS](https://tailwindcss.com/)
+- **Icons & Typography:** FontAwesome 6 & Google Fonts (*Plus Jakarta Sans*)
+- **Interactivity:** Alpine.js (Modal Lightbox & Dynamic Components)
+- **Database:** MySQL / MariaDB
+
+---
+
+## ⚙️ Cara Instalasi Lokal (Development)
+
+1. **Clone Repository:**
+   ```bash
+   git clone [https://github.com/Zhylanzzzz/WEB-HIMATIF.git](https://github.com/Zhylanzzzz/WEB-HIMATIF.git)
+   cd WEB-HIMATIF
+
+
+  - Install Dependencies:
+
+composer install
+npm install && npm run build
+
+-Konfigurasi Environment:
+Salin file .env.example menjadi .env dan atur koneksi database:
+
+cp .env.example .env
+php artisan key:generate
+
+-Migrasi Database & Seeder:
+
+php artisan migrate
+
+-Buat Storage Link & Buat Akun Admin Filament:
+
+php artisan storage:link
+php artisan make:filament-user
+
+-Jalankan Server Lokal:
+
+php artisan serve
+Akses website di http://127.0.0.1:8000 dan Admin Panel di http://127.0.0.1:8000/admin
+
